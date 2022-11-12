@@ -5,7 +5,13 @@
 <h1>Hello World</h1>
 
 <script>
-    alert( 'Hello World!');
+    const finnhub = require('finnhub');
+
+	const api_key = finnhub.ApiClient.instance.authentications['api_key'];
+	api_key.apiKey = "cdo0fqqad3i5o5okp4igcdo0fqqad3i5o5okp4j0" // Replace this
+	const finnhubClient = new finnhub.DefaultApi()
+	
+	alert( 'Working API?' );
 </script>
 
 </body>
