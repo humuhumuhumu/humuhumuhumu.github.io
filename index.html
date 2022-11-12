@@ -7,7 +7,13 @@
 <p>I'm hosted with Github.</p>
 
 <script>
-    alert( 'Hello, world!' );
+	npm install finnhub --save
+
+	const api_key = finnhub.ApiClient.instance.authentications['api_key'];
+	api_key.apiKey = "cdo0fqqad3i5o5okp4igcdo0fqqad3i5o5okp4j0" // Replace this
+	const finnhubClient = new finnhub.DefaultApi()
+
+	alert('finnhub!');
 </script>
 
 </body>
