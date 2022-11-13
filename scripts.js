@@ -30,7 +30,7 @@ function interestR() {
 
             var cash = document.getElementById("cash").value
 
-            console.log("Approx. Cash in 1 Year: " + cash * (1 - inflationRate / 100))
+            console.log("Approx. Cash in 1 Year: " + cash * (1 + inflationRate / 100))
 
             const card = document.createElement('div')
             card.setAttribute('class', 'card')
@@ -38,9 +38,9 @@ function interestR() {
             const h1 = document.createElement('h1')
             h1.textContent = "Yearly Inflation Rate: " + inflationRate + "%"
 
-            p1.innerText = cash * (1 - inflationRate / 100);
+            p1.innerText = cash * (1 + inflationRate / 100);
 
-            totalCash = cash * (1 - inflationRate / 100);
+            totalCash = cash * (1 + inflationRate / 100);
 
             container.appendChild(card)
             card.appendChild(h1)
@@ -119,7 +119,7 @@ function fun1() {
     totalStock = document.getElementById("stock").value * (1 + (marketReturn / 100))
     container.childNodes[2].childNodes[1].textContent = totalStock
 
-    totalCash = document.getElementById("cash").value * (1 - inflationRate / 100);
+    totalCash = document.getElementById("cash").value * (1 + inflationRate / 100);
     container.childNodes[3].childNodes[1].textContent = totalCash
 
     sum = (totalCash + totalStock + bondVal * 1.0)
