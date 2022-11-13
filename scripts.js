@@ -129,7 +129,7 @@ function fun1() {
     console.log(totalStock)
     console.log(bondVal)
 
-    container.childNodes[1].childNodes[1].textContent = "Stocks: " + totalStock / sum * 100 + "\n Bonds: " + bondVal / sum * 100 + "\n Cash: " + totalCash / sum * 100
+    container.childNodes[1].childNodes[1].innerText = "Stocks: " + totalStock / sum * 100 + "% \n Bonds: " + bondVal / sum * 100 + "% \n Cash: " + totalCash / sum * 100 + "%\n"
 
 }
 
@@ -150,10 +150,9 @@ var sum = totalCash + totalStock + bondVal;
 async function s() {
     await interestR();
     await stockReturn();
-    sum = 88.744
 
 
-    outP.innerText = "Stocks: " + 68.744 / sum * 100 + "\n Bonds: " + 15 / sum * 100 + "\n Cash: " + 4.61275 / sum*100
+    outP.innerText = "Stocks: " + 100000 / 120000 * 100 + "% \n Bonds: " + (15000 * 1.0)/ 120000 * 100 + "% \n Cash: " + 5000 / 120000 * 100 + "% \n"
 
     container.appendChild(out)
     out.appendChild(outH)
